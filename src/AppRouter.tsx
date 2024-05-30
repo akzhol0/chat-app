@@ -9,7 +9,7 @@ function AppRouter() {
   return (
     <Routes>
       <Route path="/" element={<MainPage />}></Route>
-      <Route path="/room/:roomTitle" element={<Chat/>}></Route>
+      <Route path="/room/:roomTitle" element={<Chat />}></Route>
       <Route path="/login" element={<Login />}></Route>
       <Route path="/register" element={<Register />}></Route>
     </Routes>

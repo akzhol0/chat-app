@@ -3,18 +3,16 @@ import { contextData } from "../../context/logic";
 import { useNavigate } from "react-router";
 
 function MainPage() {
+  const {isAuth} = useContext(contextData);
   const navigate = useNavigate();
-  const { userLoggedIn } = useContext(contextData);
 
   useEffect(() => {
-    if (!userLoggedIn) {
-      navigate("/login");
+    if (!isAuth) {
+      navigate('/login')
     }
-  });
+  })
 
-  return (
-    <div className="w-full h-screen flex"></div>
-  );
+  return <div className="w-full h-screen flex"></div>;
 }
 
 export default MainPage;
